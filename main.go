@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/dtylman/gopack/deb"
-	"github.com/dtylman/gopack/rpm"
+	"github.com/maiorrulz/gopack/deb"
+	"github.com/maiorrulz/gopack/rpm"
 )
 
 func check(err error) {
