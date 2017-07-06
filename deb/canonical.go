@@ -95,7 +95,7 @@ func (c *canonical) AddFile(name string, tarName string) error {
 		return err
 	}
 	if len(name) >= 100 {
-		fmt.Printf("File name should be less then 100 characters. Length: %d --- %s",len(name), name)
+		fmt.Printf("File name should be less then 100 characters. Length: %d --- %s\n",len(name), name)
 
 	}
 	if fileInfo.IsDir() {
