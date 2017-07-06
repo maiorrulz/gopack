@@ -12,7 +12,7 @@ import (
 
 	"errors"
 
-	"github.com/maiorrulz/gopack/files"
+	"github.com/dtylman/gopack/files"
 )
 
 const (
