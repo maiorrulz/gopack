@@ -94,8 +94,8 @@ func (c *canonical) AddFile(name string, tarName string) error {
 	if err != nil {
 		return err
 	}
-	fmt.Printf("Name length : %d", len(name))
-	fmt.Printf("fileInfo length : %d", len(fileInfo.Name()))
+	fmt.Printf("Name length : %d ---- %s\n", len(name), name)
+	fmt.Printf("fileInfo length : %d --- %s\n", len(fileInfo.Name()), fileInfo.Name())
 	if len(fileInfo.Name()) >= 100 {
 		fmt.Printf("File name should be less then 100 characters. Trimming : %s", fileInfo.Name())
 	}
