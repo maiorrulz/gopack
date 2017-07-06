@@ -11,7 +11,7 @@ import (
 	"strings"
 
 	"github.com/blakesmith/ar"
-	"github.com/dtylman/gopack/files"
+	"github.com/maiorrulz/gopack/files"
 )
 
 const (

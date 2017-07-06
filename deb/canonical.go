@@ -94,6 +94,10 @@ func (c *canonical) AddFile(name string, tarName string) error {
 	if err != nil {
 		return err
 	}
+
+	if len(fileInfo.Name()) >= 100 {
+		fmt.Errorf("File name should be less then 100 characters. Trimming : %s", fileInfo.Name())
+	}
 	if fileInfo.IsDir() {
 		return fmt.Errorf("%s is a directory, use AddFolder instead", name)
 	}
