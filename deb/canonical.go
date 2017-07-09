@@ -80,6 +80,7 @@ func (c *canonical) AddEmptyFolder(name string) error {
 	if len(name) >= 100 {
 		fmt.Printf("Empty folder name should be less then 100 characters. Length: %d --- %s\n",len(name), name)
 		fmt.Printf("----------------------------------------------------------------------------------------------------------------------------------------------\n")
+		return nil
 	}
 	name = strings.TrimPrefix(name, "/")
 	if name == "" {
@@ -103,7 +104,7 @@ func (c *canonical) AddFile(name string, tarName string) error {
 		fmt.Printf("File name should be less then 100 characters. Length: %d --- %s\n",len(tarName), tarName)
 		fmt.Printf("Just Name Length: %d --- %s\n", len(fileInfo.Name()), fileInfo.Name())
 		fmt.Printf("----------------------------------------------------------------------------------------------------------------------------------------------\n")
-
+		return nil
 	}
 	if fileInfo.IsDir() {
 		return fmt.Errorf("%s is a directory, use AddFolder instead", name)
