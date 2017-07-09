@@ -77,6 +77,10 @@ func (c *canonical) AddLink(name string, linkName string) error {
 }
 
 func (c *canonical) AddEmptyFolder(name string) error {
+	if len(name) >= 100 {
+		fmt.Printf("Empty folder name should be less then 100 characters. Length: %d --- %s\n",len(name), name)
+		fmt.Printf("----------------------------------------------------------------------------------------------------------------------------------------------\n")
+	}
 	name = strings.TrimPrefix(name, "/")
 	if name == "" {
 		return fmt.Errorf("Cannot add empty name for empty folder")
